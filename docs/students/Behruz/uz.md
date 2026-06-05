@@ -1,22 +1,39 @@
 # Behruz — Toyota Camry landing
 
-## Fayl
+## ✅ 1-vazifa bajarildi
 
-`src/pages/Behruz/CamryPage.jsx`
+Camry landing sahifasi (`CamryPage.jsx`) tayyor — qabul qilindi. Zo'r ish!
 
-## Figma
+---
 
-`figma/Behruz.jpg`, `Behruz-1.jpg`
+## 🆕 2-vazifa: «Sравнение» — avtolarni taqqoslash sahifasi
 
-## Ochish
+Camry sahifasini yaxshi yig'gansiz, endi shu tajriba bilan **avto taqqoslash** sahifasini yasaysiz.
 
-**«Toyota Camry»** → `/camry`
+### Yangi fayl
 
-## Vazifa
+`src/pages/Behruz/ComparePage.jsx`
 
-Hero, Active komplektatsiya, promo grid, trade-in, xususiyatlar, kredit, o'xshash takliflar, video sharhlar.
+> Sahifa `/compare` route'iga ulanadi (hozir u placeholder). Komponentni yig'asiz — route'ga ulashni team lead qiladi (merge'dan keyin).
 
-Komponentlar: `src/pages/Behruz/components/`
+### Sahifani ochish
+
+Header/Footer: **«Сравнение»** → `/compare`
+
+### Nimalar yig'iladi
+
+- **Sarlavha** — «Avtolarni taqqoslash»
+- **2-3 ta avto ustun** — har biri kartochka: rasm, model, narx, «O'chirish» tugmasi
+- **«+ Avto qo'shish»** bo'sh ustuni
+- **Xususiyatlar jadvali** — qatorlar bo'yicha taqqoslash: dvigatel, quvvat, yoqilg'i sarfi, uzatma, narx va h.k.
+- **Farqlarni ajratib ko'rsatish** — bir xil bo'lmagan qatorlarni rang bilan belgilash (bonus)
+- Ma'lumotlar uchun oddiy `const cars = [...]` massivi yetarli (backend shart emas)
+
+### Qoidalar
+
+- **Tailwind CSS**, mobil ko'rinishda jadval gorizontal scroll bo'lsin
+- Camry sahifasidagi kartochka uslublarini qayta ishlating
+- `npm run dev` bilan tekshiring
 
 ---
 
@@ -25,14 +42,14 @@ Komponentlar: `src/pages/Behruz/components/`
 > To'liq qo'llanma: [`docs/GIT_GUIDE.uz.md`](../../GIT_GUIDE.uz.md)
 
 ```bash
-git clone https://github.com/TASHKILOT/2749.git && cd 2749 && npm install
 git checkout main && git pull origin main
-git checkout -b feature/behruz
+git checkout feature/behruz
+git merge origin/main
 ```
 
 ```bash
 git add src/pages/Behruz/
-git commit -m "feat(behruz): Camry hero va komplektatsiya"
+git commit -m "feat(behruz): avtolarni taqqoslash sahifasi"
 git push -u origin feature/behruz
 ```
 

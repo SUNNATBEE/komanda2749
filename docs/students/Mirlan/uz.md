@@ -1,22 +1,41 @@
 # Mirlan — Maxsus takliflar
 
-## Fayl
+## ✅ 1-vazifa bajarildi
 
-`src/pages/Mirlan/OffersPage.jsx`
+Maxsus takliflar sahifasi (`OffersPage`) tayyor — qabul qilindi. Rahmat!
 
-## Figma
+> ⚠️ **Kichik tartib:** papkangizda ortiqcha fayllar bor —
+> `Camry.jsx`, `Comry.jsx`, `Rasm.jsx`, `Tayo.jsx`, `Toyota.jsx`.
+> 2-vazifa bilan birga **ishlatilmayotganlarini o'chiring**, faqat kerakli fayllar qolsin
+> (`OffersPage.jsx` va u import qiladigan fayllar).
 
-`figma/Mirlan.jpg`, `Mirlan-1.jpg`
+---
 
-## Ochish
+## 🆕 2-vazifa: «Отзывы» — sharhlar sahifasi
 
-**«СПЕЦПРЕДЛОЖЕНИЯ»** → `/offers`
+### Yangi fayl
 
-## Vazifa
+`src/pages/Mirlan/ReviewsPage.jsx`
 
-Camry hero, nallikdagi avtolar ro'yxati, aksiya formasi, interyer galereyasi, o'xshash takliflar, reyting, sharhlar, blog.
+> Sahifa `/reviews` route'iga ulanadi (hozir u placeholder). Komponentni yig'asiz — route'ga ulashni team lead qiladi (merge'dan keyin).
 
-Ichki menyu: `#about`, `#configs` kabi anchor linklar.
+### Sahifani ochish
+
+Footer: **«Отзывы»** → `/reviews`
+
+### Nimalar yig'iladi
+
+- **Sarlavha** — «Mijozlar sharhlari» + umumiy reyting (masalan ⭐ 4.8 / 5)
+- **Sharh kartochkalari (grid)** — har biri: avatar, ism, yulduzcha reyting, sana, matn
+- **Filtr/saralash** — «Hammasi / 5★ / 4★ …» tugmalari (oddiy `useState` bilan)
+- **Sharh qoldirish formasi** — ism, reyting (yulduzchalar), matn + «Yuborish»
+- Ma'lumotlar uchun oddiy `const reviews = [...]` massivi yetarli (backend shart emas)
+
+### Qoidalar
+
+- **Tailwind CSS** ishlating
+- Offers sahifasidagi kartochka uslublarini qayta ishlating
+- `npm run dev` bilan tekshiring
 
 ---
 
@@ -25,14 +44,14 @@ Ichki menyu: `#about`, `#configs` kabi anchor linklar.
 > To'liq qo'llanma: [`docs/GIT_GUIDE.uz.md`](../../GIT_GUIDE.uz.md)
 
 ```bash
-git clone https://github.com/TASHKILOT/2749.git && cd 2749 && npm install
 git checkout main && git pull origin main
-git checkout -b feature/mirlan
+git checkout feature/mirlan
+git merge origin/main
 ```
 
 ```bash
 git add src/pages/Mirlan/
-git commit -m "feat(mirlan): maxsus takliflar sahifasi"
+git commit -m "feat(mirlan): sharhlar sahifasi"
 git push -u origin feature/mirlan
 ```
 
@@ -40,9 +59,7 @@ git push -u origin feature/mirlan
 
 | Harakat | Buyruq |
 |---------|--------|
-| Yuklab olish | `git clone URL` |
 | main yangilash | `git checkout main && git pull origin main` |
-| Branch ochish | `git checkout -b feature/mirlan` |
 | Saqlash | `git add . && git commit -m "xabar"` |
 | Yuborish | `git push -u origin feature/mirlan` |
 | main ga qo'shish | Pull Request → Merge |

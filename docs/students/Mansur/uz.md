@@ -1,31 +1,41 @@
 # Mansur — Bosh sahifa va «Taksi kreditga»
 
-## Sizning mas'uliyatingiz
+## ✅ 1-vazifa bajarildi
 
-Siz **sahifa kontentini** yozasiz. Header va Footer tayyor — ularni jamoa kelishuvisiz o'zgartirmang.
+Bosh sahifa (`HomePage.jsx`) tayyor — qabul qilindi. Rahmat!
 
-## Kod yozish fayllari
+---
 
-| Sahifa | Fayl | Figma maketi |
-|--------|------|--------------|
-| Bosh sahifa | `src/pages/Mansur/HomePage.jsx` | `figma/Mansur.jpg` |
-| Taksi kreditga | `src/pages/Mansur/TaxiCreditPage.jsx` | `figma/Mansur.jpg` (pastki qismlar) |
+## 🆕 2-vazifa: «Taksi kreditga» sahifasi
 
-## Header orqali sahifangizni ochish
+Hozir bu sahifa **bo'sh** (faqat placeholder turibdi). Endi uni to'liq yig'ish kerak.
 
-1. **Bosh sahifa** — Header chapidagi **ABC AUTO** logotipini yoki ikkinchi qatordagi **«Главная»** ni bosing → `/`
-2. **Taksi kreditga** — Header/Footer dagi **«ТАКСИ В КРЕДИТ»** tugmasini bosing → `/taxi-credit`
+### Fayl
 
-## Bosh sahifada nima qilish kerak
+`src/pages/Mansur/TaxiCreditPage.jsx`
 
-- Hero-slayder, avto filtri, «наличиида» kartochkalar
-- «Bizning tanlovlar», maxsus takliflar, avtokredit arizasi
-- Hamkor banklar, ishonch, sharhlar, kompaniya haqida, blog, xarita
+### Figma maketi
 
-## Qoidalar
+`figma/Mansur.jpg` — sahifaning **pastki/taksi bo'limlari**
+
+### Sahifani ochish
+
+Header (3-qator) yoki Footer'dagi **«ТАКСИ В КРЕДИТ»** tugmasi → `/taxi-credit`
+
+### Nimalar yig'iladi
+
+- **Hero** — «Таксига kreditga avto» sarlavhasi, ariza formasi (ism, telefon)
+- **Shartlar bloki** — boshlang'ich to'lov, oylik to'lov, muddat (kartochkalar)
+- **Mavjud avtolar** — taksi uchun modellar ro'yxati (kartochka + narx + «Ariza»)
+- **Hamkor banklar** logotiplari
+- **Qadamlar** — «Ariza → Tasdiq → Avtoni olish» (3-4 qadam)
+- **FAQ** — tez-tez beriladigan savollar (accordion)
+
+### Qoidalar
 
 - **Tailwind CSS** ishlating
-- `npm run dev` bilan tekshiring
+- Bosh sahifadagi kartochka/uslublarni qayta ishlating (bir xil ko'rinish)
+- `npm run dev` bilan tekshiring — menyudagi o'tishlar ishlashi kerak
 
 ---
 
@@ -33,40 +43,25 @@ Siz **sahifa kontentini** yozasiz. Header va Footer tayyor — ularni jamoa keli
 
 > To'liq qo'llanma: [`docs/GIT_GUIDE.uz.md`](../../GIT_GUIDE.uz.md)
 
-### Tez boshlash
-
-```bash
-git clone https://github.com/TASHKILOT/2749.git
-cd 2749
-npm install
-git checkout main
-git pull origin main
-git checkout -b feature/mansur
-```
-
 ### Har kungi ish tartibi
 
 ```bash
-# 1. main ni yangilash va o'z branch'iga qaytish
+# 1. main ni yangilash va o'z branch'iga o'tish
 git checkout main && git pull origin main
 git checkout feature/mansur
 git merge origin/main
 
-# 2. HomePage.jsx / TaxiCreditPage.jsx da ishlagandan keyin
-git status
+# 2. TaxiCreditPage.jsx da ishlagandan keyin
 git add src/pages/Mansur/
-git commit -m "feat(mansur): bosh sahifa hero qo'shildi"
+git commit -m "feat(mansur): taksi kreditga sahifasi"
 git push -u origin feature/mansur
 
 # 3. GitHub → Pull Request → feature/mansur → main → Merge
 ```
 
-### Buyruqlar ma'nosi
-
 | Buyruq | Vazifasi |
 |--------|----------|
 | `git pull` | GitHubdan yangi kod olish |
-| `git checkout -b feature/mansur` | O'z branch'ingizni yaratish |
 | `git add .` | O'zgarishlarni tayyorlash |
 | `git commit -m "..."` | Lokal saqlash |
 | `git push` | GitHubga yuborish |
