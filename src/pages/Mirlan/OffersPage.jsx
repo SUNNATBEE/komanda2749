@@ -1,13 +1,13 @@
 import PagePlaceholder from '../../components/layout/PagePlaceholder'
+import Toyota from './Toyota'
 
 export default function OffersPage() {
   return (
-    <PagePlaceholder
-      student="Mirlan"
-      title="Спецпредложения — Toyota Camry"
-      figma="figma/Mirlan.jpg, figma/Mirlan-1.jpg"
-      route="/offers"
-      description="Camry в наличии, акция «Станьте владельцем», интерьер, похожие предложения, рейтинги, отзывы, блог."
-    />
+         <Toyota />
+
+   
+      
+ 
+
   )
 }
