@@ -1,28 +1,41 @@
 # Mirlan — Спецпредложения
 
-## Файл
+## ✅ Задача 1 выполнена
 
-`src/pages/Mirlan/OffersPage.jsx`
+Страница спецпредложений (`OffersPage`) готова — принята. Спасибо!
 
-## Макеты
+> ⚠️ **Небольшая уборка:** в вашей папке есть лишние файлы —
+> `Camry.jsx`, `Comry.jsx`, `Rasm.jsx`, `Tayo.jsx`, `Toyota.jsx`.
+> Вместе с задачей 2 **удалите неиспользуемые**, оставьте только нужные
+> (`OffersPage.jsx` и файлы, которые он импортирует).
 
-`figma/Mirlan.jpg`, `figma/Mirlan-1.jpg`
+---
 
-## Как открыть
+## 🆕 Задача 2: страница «Отзывы»
 
-Header/Footer: **«СПЕЦПРЕДЛОЖЕНИЯ»** → `/offers`
+### Новый файл
 
-## Что сверстать
+`src/pages/Mirlan/ReviewsPage.jsx`
 
-- Hero Toyota Camry, цена от 4 790 000 ₽
-- «Автомобили Toyota Camry в наличии» (список с кнопками «Забронировать»)
-- Акция «Станьте владельцем…» с формой
-- Интерьер (галерея), похожие предложения
-- «Нам доверяют», отзывы, блог, SEO
+> Страница подключается к маршруту `/reviews` (сейчас там заглушка). Вы собираете компонент — подключение к маршруту сделает team lead после merge.
 
-## Sticky-меню с макета
+### Как открыть
 
-«О модели», «Комплектации», «Характеристики» — якорная навигация внутри страницы (`id` + `scrollIntoView`).
+Footer: **«Отзывы»** → `/reviews`
+
+### Что сверстать
+
+- **Заголовок** — «Отзывы клиентов» + общий рейтинг (например ⭐ 4.8 / 5)
+- **Сетка карточек отзывов** — в каждой: аватар, имя, звёздный рейтинг, дата, текст
+- **Фильтр/сортировка** — кнопки «Все / 5★ / 4★ …» (через простой `useState`)
+- **Форма отзыва** — имя, рейтинг (звёзды), текст + кнопка «Отправить»
+- Данные можно держать в простом массиве `const reviews = [...]` (бэкенд не нужен)
+
+### Правила
+
+- Используйте **Tailwind CSS**
+- Переиспользуйте стили карточек со страницы спецпредложений
+- Проверьте через `npm run dev`
 
 ---
 
@@ -31,14 +44,14 @@ Header/Footer: **«СПЕЦПРЕДЛОЖЕНИЯ»** → `/offers`
 > Полная шпаргалка: [`docs/GIT_GUIDE.ru.md`](../../GIT_GUIDE.ru.md)
 
 ```bash
-git clone https://github.com/TASHKILOT/2749.git && cd 2749 && npm install
 git checkout main && git pull origin main
-git checkout -b feature/mirlan
+git checkout feature/mirlan
+git merge origin/main
 ```
 
 ```bash
 git add src/pages/Mirlan/
-git commit -m "feat(mirlan): спецпредложения Camry"
+git commit -m "feat(mirlan): страница отзывов"
 git push -u origin feature/mirlan
 ```
 
@@ -46,9 +59,7 @@ git push -u origin feature/mirlan
 
 | Действие | Команда |
 |----------|---------|
-| Клонировать | `git clone URL` |
 | Обновить main | `git checkout main && git pull origin main` |
-| Новая ветка | `git checkout -b feature/mirlan` |
 | Сохранить | `git add . && git commit -m "сообщение"` |
 | Отправить | `git push -u origin feature/mirlan` |
 | Слить в main | Pull Request → Merge на GitHub |
