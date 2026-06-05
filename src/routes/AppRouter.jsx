@@ -9,7 +9,7 @@ import HomePage from '../pages/Mansur/HomePage'
 import TaxiCreditPage from '../pages/Mansur/TaxiCreditPage'
 import OffersPage from '../pages/Mirlan/OffersPage'
 import CreditPage from '../pages/Odil/CreditPage'
-import CatalogPage from '../pages/Qobil/CatalogPage'
+import CatalogPage from '../pages/Qobil/CatalogPage'  
 import SimplePage from '../pages/shared/SimplePage'
 
 export default function AppRouter() {
